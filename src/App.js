@@ -13,7 +13,7 @@ function usePageViews(){
   useEffect(() => {
     console.log('triggered - 1')
     ReactGA.initialize("G-L49RSBMT76");
-    ReactGA.send({ hitType: "pageview", page: location.pathname });
+    ReactGA.send({ hitType: "page-view", page: location.pathname });
   }, [location])
 }
 
