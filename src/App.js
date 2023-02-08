@@ -27,6 +27,8 @@ function App() {
   useEffect(() => {
     InitializeGoogleAnalytics();
     TrackGoogleAnalyticsEvent('page-view-vf', "click", location.pathname)
+    TrackGoogleAnalyticsEvent('page-view-wine', "click", location.pathname)
+    TrackGoogleAnalyticsEvent('page-view-cantu', "click", location.pathname)
 
   }, [location])
 
