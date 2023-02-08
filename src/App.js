@@ -25,9 +25,8 @@ function App() {
   let location = useLocation();
 
   useEffect(() => {
-
     InitializeGoogleAnalytics();
-    TrackGoogleAnalyticsEvent('teste', "teste", 'teste')
+    TrackGoogleAnalyticsEvent('page-view-vf', "click", location.pathname)
 
   }, [location])
 
