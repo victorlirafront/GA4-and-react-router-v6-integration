@@ -6,7 +6,7 @@ import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import MainHeader from './components/MainHeader';
 
-// import { InitializeGoogleAnalytics, TrackGoogleAnalyticsEvent } from './google-analytics'
+import { InitializeGoogleAnalytics, TrackGoogleAnalyticsEvent } from './google-analytics'
 
 // function usePageViews(){
 //   let location = useLocation();
@@ -20,15 +20,12 @@ import MainHeader from './components/MainHeader';
 
 
 
-
 function App() {
   let location = useLocation();
 
   useEffect(() => {
-    // InitializeGoogleAnalytics();
-    // TrackGoogleAnalyticsEvent('page-view-vf', "click", location.pathname)
-    // TrackGoogleAnalyticsEvent('page-view-wine', "click", location.pathname)
-    // TrackGoogleAnalyticsEvent('page-view-cantu', "click", location.pathname)
+    InitializeGoogleAnalytics();
+    TrackGoogleAnalyticsEvent('page-view-vf', "click", location.pathname)
 
   }, [location])
 
