@@ -11,13 +11,8 @@ function usePageViews(){
   let location = useLocation();
 
   useEffect(() => {
-    console.log('triggered')
-    console.log(window.GA_INITIALIZED)
-    if(!window.GA_INITIALIZED){
-      ReactGA.initialize("G-L49RSBMT76");
-      window.GA_INITIALIZED = true
-    }
-
+    ReactGA.initialize("G-L49RSBMT76");
+    
     ReactGA.set({page: location.pathname})
     ReactGA.pageview(location.pathname)
   }, [location])
