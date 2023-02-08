@@ -6,7 +6,7 @@ import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import MainHeader from './components/MainHeader';
 
-import { InitializeGoogleAnalytics, TrackGoogleAnalyticsEvent } from './google-analytics'
+// import { InitializeGoogleAnalytics, TrackGoogleAnalyticsEvent } from './google-analytics'
 
 // function usePageViews(){
 //   let location = useLocation();
