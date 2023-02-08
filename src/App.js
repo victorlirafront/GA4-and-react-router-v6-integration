@@ -25,10 +25,10 @@ function App() {
   let location = useLocation();
 
   useEffect(() => {
-    InitializeGoogleAnalytics();
-    TrackGoogleAnalyticsEvent('page-view-vf', "click", location.pathname)
-    TrackGoogleAnalyticsEvent('page-view-wine', "click", location.pathname)
-    TrackGoogleAnalyticsEvent('page-view-cantu', "click", location.pathname)
+    // InitializeGoogleAnalytics();
+    // TrackGoogleAnalyticsEvent('page-view-vf', "click", location.pathname)
+    // TrackGoogleAnalyticsEvent('page-view-wine', "click", location.pathname)
+    // TrackGoogleAnalyticsEvent('page-view-cantu', "click", location.pathname)
 
   }, [location])
 
