@@ -8,19 +8,12 @@ import MainHeader from './components/MainHeader';
 import ReactGA from "react-ga4";
 
 function usePageViews(){
-  let location = useLocation();
 
   useEffect(() => {
-    console.log('triggered')
+    console.log('triggered - 1')
+    let location = useLocation();
     ReactGA.initialize("G-L49RSBMT76");
     ReactGA.send({ hitType: "pageview", page: location.pathname });
-
-    ReactGA.event({
-      name: 'Victor',
-      email: "pj.victor@wine.com.br", // optional
-      value: 99, // optional, must be a number
-      phone: "(27) 99767-3329", // optional, true/false
-    });
   }, [location])
 }
 
