@@ -7,18 +7,30 @@ import ProductDetail from './pages/ProductDetail';
 import MainHeader from './components/MainHeader';
 import ReactGA from "react-ga4";
 
-function usePageViews(){
+import { InitializeGoogleAnalytics, TrackGoogleAnalyticsEvent } from './google-analytics'
+
+// function usePageViews(){
+//   let location = useLocation();
+
+//   useEffect(() => {
+//     console.log('triggered - 1')
+//     ReactGA.initialize("G-L49RSBMT76");
+//     ReactGA.send({ hitType: "page-view", page: location.pathname });
+//   }, [location])
+// }
+
+
+
+
+function App() {
   let location = useLocation();
 
   useEffect(() => {
-    console.log('triggered - 1')
-    ReactGA.initialize("G-L49RSBMT76");
-    ReactGA.send({ hitType: "page-view", page: location.pathname });
-  }, [location])
-}
 
-function App() {
-  usePageViews()
+    InitializeGoogleAnalytics();
+    TrackGoogleAnalyticsEvent('teste', "teste", 'teste')
+
+  }, [location])
 
   return (
     <div>
