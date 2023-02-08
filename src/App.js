@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     InitializeGoogleAnalytics();
-    TrackGoogleAnalyticsEvent('page-view-vf', "click", location.pathname)
+    TrackGoogleAnalyticsEvent('user', "page-change", 'victor')
 
   }, [location])
 
