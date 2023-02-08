@@ -11,10 +11,16 @@ function usePageViews(){
   let location = useLocation();
 
   useEffect(() => {
+    console.log('triggered')
     ReactGA.initialize("G-L49RSBMT76");
-    // ReactGA.set({page: location.pathname})
-    // ReactGA.pageview(location.pathname)
     ReactGA.send({ hitType: "pageview", page: location.pathname });
+
+    ReactGA.event({
+      name: 'Victor',
+      email: "pj.victor@wine.com.br", // optional
+      value: 99, // optional, must be a number
+      phone: "(27) 99767-3329", // optional, true/false
+    });
   }, [location])
 }
 
