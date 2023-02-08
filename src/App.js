@@ -5,16 +5,16 @@ import Welcome from './pages/Welcome';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import MainHeader from './components/MainHeader';
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga4";
 
 function usePageViews(){
   let location = useLocation();
 
   useEffect(() => {
     ReactGA.initialize("G-L49RSBMT76");
-    
-    ReactGA.set({page: location.pathname})
-    ReactGA.pageview(location.pathname)
+    // ReactGA.set({page: location.pathname})
+    // ReactGA.pageview(location.pathname)
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
   }, [location])
 }
 
