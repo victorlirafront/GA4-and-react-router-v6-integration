@@ -8,10 +8,10 @@ import MainHeader from './components/MainHeader';
 import ReactGA from "react-ga4";
 
 function usePageViews(){
+  let location = useLocation();
 
   useEffect(() => {
     console.log('triggered - 1')
-    let location = useLocation();
     ReactGA.initialize("G-L49RSBMT76");
     ReactGA.send({ hitType: "pageview", page: location.pathname });
   }, [location])
