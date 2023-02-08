@@ -5,7 +5,6 @@ import Welcome from './pages/Welcome';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import MainHeader from './components/MainHeader';
-import ReactGA from "react-ga4";
 
 import { InitializeGoogleAnalytics, TrackGoogleAnalyticsEvent } from './google-analytics'
 
